@@ -1,0 +1,7 @@
+#game-canvas {
+  display: block;
+  outline: 10px solid #61a3ba;
+  margin-inline: auto;
+  margin-block: 1.5rem;
+  background-color: white;
+}

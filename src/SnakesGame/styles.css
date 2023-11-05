@@ -1,0 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Agbalumo&display=swap");
+
+#snakes-game-container {
+  background-color: #ffffdd;
+  min-height: 100vh;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#game-title {
+  text-align: center;
+  background-color: #a2c579;
+  color: #222;
+  font-size: 2.5rem;
+  padding-block: 1.5rem;
+
+  font-family: Agbalumo, "Red Hat Display", sans-serif;
+}
+
+.high-score {
+  background-color: #d2de32;
+  color: black;
+  font-variant: small-caps;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 900;
+  width: fit-content;
+  margin-inline: auto;
+  margin-top: 1rem;
+  padding: 0.2rem 1rem;
+  border-radius: 1rem;
+}
+
+.score {
+  text-align: center;
+  font-size: 2em;
+  font-weight: 900;
+  margin-block: 1rem;
+  width: fit-content;
+  margin-inline: auto;
+}
+
+.score > span:first-child {
+  background-color: #61a3ba;
+  color: white;
+  padding-block: 0.5rem;
+  padding-inline: 1rem 0.3rem;
+  border-top-left-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+}
+
+.score > span:last-child {
+  background-color: #d2de32;
+  color: #222;
+  padding-block: 0.5rem;
+  padding-inline: 0.8rem 1rem;
+  border-top-right-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+
+.new-game-hint {
+  text-align: center;
+  color: black;
+  font-weight: 900;
+  font-size: 1.5rem;
+  animation: teeter 2s linear infinite;
+  margin-top: 2rem;
+}
+
+@keyframes teeter {
+  0%,
+  50%,
+  100% {
+    transform: rotateZ(0deg);
+  }
+
+  25% {
+    transform: rotateZ(-5deg);
+  }
+
+  75% {
+    transform: rotateZ(5deg);
+  }
+}
+
+.pause-hint {
+  text-align: center;
+  font-style: italic;
+  color: #333;
+}
+
+.pause-hint kbd {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background-color: #333;
+  color: salmon;
+  border-radius: 0.5rem;
+}
+
+#game-over-modal-container {
+  position: fixed;
+  inset: 0;
+  outline: 1px solid red;
+  background-color: #a2c579;
+  cursor: pointer;
+}
+
+#game-over-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+
+  width: 700px;
+  height: 300px;
+
+  display: grid;
+  place-content: center;
+  text-align: center;
+  border-radius: 10px;
+
+  box-shadow: 0 0 10px 5px black, 0 0 100px 10px black;
+}
+
+#game-over-modal > h2 {
+  font-size: 4em;
+}
+
+.final-score {
+  font-size: 1.3em;
+}
+
+.final-score > span {
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.congratulate {
+  margin-block: 0.5rem;
+  font-size: 1.5rem;
+  background-color: #61a3ba;
+  color: white;
+  padding-inline: 0.5rem;
+  font-weight: 900;
+  border-radius: 1rem;
+}
+
+#paused-modal-container {
+  position: fixed;
+  inset: 0;
+  background-color: hsla(0, 0%, 10%, 0.7);
+
+  cursor: pointer;
+}
+
+#paused-modal {
+  width: 500px;
+  height: 300px;
+  background-color: #61a3ba;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  place-content: center;
+  border-radius: 1rem;
+  text-align: center;
+}
+
+#paused-modal > h2 {
+  font-size: 3rem;
+}
+
+#paused-modal > .click-dir {
+  color: white;
+}
+
+.click-dir {
+  color: hsl(0, 0%, 30%);
+  font-style: italic;
+  font-size: 1.3rem;
+}

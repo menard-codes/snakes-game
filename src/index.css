@@ -1,0 +1,23 @@
+:root {
+  --base-font-family: Arial, Helvetica, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  min-height: 100vh;
+}
+
+#root {
+  isolation: isolate;
+  min-height: 100vh;
+
+  font-family: var(--base-font-family);
+}
